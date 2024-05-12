@@ -47,6 +47,30 @@
             "revert_icon": "\uf0e2 ",
             "tag_icon": "\uf412 "
           }
+        },
+        {
+          "type": "rust",
+          "style": "powerline",
+          "foreground": "p:flamingo",
+          "template": "  {{ .Full }} "
+        },
+        {
+          "type": "python",
+          "style": "powerline",
+          "foreground": "p:flamingo",
+          "template": "  {{ .Full }} "
+        },
+        {
+          "type": "lua",
+          "style": "powerline",
+          "foreground": "p:flamingo",
+          "template": "  {{ .Full }} "
+        },
+        {
+          "type": "kubectl",
+          "style": "powerline",
+          "foreground": "p:flamingo",
+          "template": " ﴱ {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
         }
       ]
     },
@@ -101,6 +125,7 @@
     "lavender": "#BABBF1",
     "os": "#ACB0BE",
     "pink": "#F4B8E4",
+    "flamingo": "#eebebe",
     "peach": "#ef9f76",
     "teal": "#81c8be",
     "red": "#e78284"
