@@ -49,6 +49,37 @@
           }
         },
         {
+          "type": "executiontime",
+          "style": "powerline",
+          "foreground": "p:pink",
+          "template": "  {{ .FormattedMs }} ",
+          "properties": {
+            "threshold": 149,
+            "style": "austin",
+            "always_enabled": true
+          }
+        },
+        {
+          "type": "status",
+          "style": "diamond",
+          "foreground": "p:teal",
+          "foreground_templates": [
+            "{{ if .Error }}p:red{{ end }}"
+          ],
+          "template": " {{ if .Error}}<b>Failed </b>{{end}}{{ .Code }}",
+          "properties": {
+            "always_enabled": true,
+            "status_template": "{{ .Code }}",
+            "status_separator": "|"
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
           "type": "rust",
           "style": "powerline",
           "foreground": "p:flamingo",
@@ -70,38 +101,7 @@
           "type": "kubectl",
           "style": "powerline",
           "foreground": "p:flamingo",
-          "template": " ﴱ {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
-        }
-      ]
-    },
-    {
-      "type": "prompt",
-      "alignment": "right",
-      "segments": [
-        {
-          "type": "executiontime",
-          "style": "powerline",
-          "foreground": "p:peach",
-          "template": "  {{ .FormattedMs }} ",
-          "properties": {
-            "threshold": 149,
-            "style": "austin",
-            "always_enabled": true
-          }
-        },
-        {
-          "type": "status",
-          "style": "diamond",
-          "foreground": "p:teal",
-          "foreground_templates": [
-            "{{ if .Error }}p:red{{ end }}"
-          ],
-          "template": " {{ if .Error}}<b>Failed </b>{{end}}{{ .Code }}",
-          "properties": {
-            "always_enabled": true,
-            "status_template": "{{ .Code }}",
-            "status_separator": "|"
-          }
+          "template": " 󱃾 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
         }
       ]
     },
