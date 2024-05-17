@@ -14,15 +14,9 @@
           "template": "{{.Icon}} "
         },
         {
-          "type": "session",
-          "style": "plain",
-          "foreground": "p:blue",
-          "template": "{{ .UserName }}@{{ .HostName }} "
-        },
-        {
           "type": "path",
           "style": "plain",
-          "foreground": "p:pink",
+          "foreground": "p:blue",
           "template": "{{ .Path }} ",
           "properties": {
             "folder_icon": "..\ue5fe..",
@@ -33,7 +27,7 @@
         {
           "type": "git",
           "style": "plain",
-          "foreground": "p:lavender",
+          "foreground": "p:pink",
           "template": "{{ .HEAD }} ",
           "properties": {
             "branch_icon": "\ue725 ",
@@ -49,9 +43,45 @@
           }
         },
         {
+          "type": "rust",
+          "style": "powerline",
+          "foreground": "p:lavender",
+          "template": "  {{ .Full }} "
+        },
+        {
+          "type": "python",
+          "style": "powerline",
+          "foreground": "p:lavender",
+          "template": "  {{ .Full }} "
+        },
+        {
+          "type": "lua",
+          "style": "powerline",
+          "foreground": "p:lavender",
+          "template": "  {{ .Full }} "
+        },
+        {
+          "type": "terraform",
+          "style": "powerline",
+          "foreground": "p:lavender",
+          "template": "  {{.WorkspaceName}}"
+        },
+        {
+          "type": "kubectl",
+          "style": "powerline",
+          "foreground": "p:flamingo",
+          "template": " 󱃾 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
           "type": "executiontime",
           "style": "powerline",
-          "foreground": "p:pink",
+          "foreground": "p:lavender",
           "template": "  {{ .FormattedMs }} ",
           "properties": {
             "threshold": 149,
@@ -72,36 +102,6 @@
             "status_template": "{{ .Code }}",
             "status_separator": "|"
           }
-        }
-      ]
-    },
-    {
-      "type": "prompt",
-      "alignment": "right",
-      "segments": [
-        {
-          "type": "rust",
-          "style": "powerline",
-          "foreground": "p:flamingo",
-          "template": "  {{ .Full }} "
-        },
-        {
-          "type": "python",
-          "style": "powerline",
-          "foreground": "p:flamingo",
-          "template": "  {{ .Full }} "
-        },
-        {
-          "type": "lua",
-          "style": "powerline",
-          "foreground": "p:flamingo",
-          "template": "  {{ .Full }} "
-        },
-        {
-          "type": "kubectl",
-          "style": "powerline",
-          "foreground": "p:flamingo",
-          "template": " 󱃾 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
         }
       ]
     },
