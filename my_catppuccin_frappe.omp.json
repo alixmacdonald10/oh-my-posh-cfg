@@ -96,7 +96,7 @@
           "foreground_templates": [
             "{{ if .Error }}p:red{{ end }}"
           ],
-          "template": " {{ if .Error}}<b>Failed </b>{{end}}{{ .Code }}",
+          "template": "{{ if .Error}} 󰚌 <b>Failed </b>{{ else }}  {{end}}{{ .Code }}",
           "properties": {
             "always_enabled": true,
             "status_template": "{{ .Code }}",
